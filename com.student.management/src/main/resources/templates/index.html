@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f8ff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        animation: backgroundAnimation 10s infinite alternate;
+    }
+    @keyframes backgroundAnimation {
+        0% { background-color: #f0f8ff; }
+        50% { background-color: #e6f7ff; }
+        100% { background-color: #f0f8ff; }
+    }
+    h2 {
+        color: #343a40;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 28px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+        animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    button {
+        background-color: #007bff;
+        color: white;
+        padding: 15px 25px;
+        border: 2px solid #0056b3;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-bottom: 20px;
+        width: 250px;
+        transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+        animation: buttonAnimation 1s ease-in-out;
+    }
+    @keyframes buttonAnimation {
+        from { transform: scale(0.9); }
+        to { transform: scale(1); }
+    }
+    button:hover {
+        background-color: #0056b3;
+        border-color: #003f7f;
+        transform: scale(1.05);
+    }
+    a {
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+<h2>Student Management System</h2>
+
+<div class="button-container">
+    <a href="openAddStudentPage"><button>ADD STUDENT</button></a>
+    <a href="openUpdateStudentPage"><button>UPDATE STUDENT</button></a>
+    <a href="openDeleteStudentPage"><button>DELETE STUDENT</button></a>
+    <a href="openSearchStudentPage"><button>SEARCH STUDENT</button></a>
+    <a href="fetchAllStudents"><button>GET ALL STUDENTS</button></a>
+    <a href="deleteAllStudents"><button>DELETE ALL STUDENTS</button></a>
+</div>
+
+</body>
+</html>
